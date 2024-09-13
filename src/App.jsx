@@ -1,9 +1,9 @@
-// import Cards from "./Cards";
+import Cards from "./Cards";
 
 function App() {
   console.log("this");
   return (
-  // <Cards></Cards>
+  <Cards></Cards>
   );
 };
 
