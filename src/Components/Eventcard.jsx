@@ -4,6 +4,7 @@ const Eventcard = (props) => {
     return (
         <div className="event">
             <img src={props.img} alt="" />
+            <div className="text">
             <h2>{props.text}</h2>
             <ul>
                 <li><a href="">Creative Multimedia</a></li>
@@ -11,6 +12,7 @@ const Eventcard = (props) => {
             </ul>
             <p>{props.pera}</p>
             <button>Read More...</button>
+            </div>
         </div>
     )
 }

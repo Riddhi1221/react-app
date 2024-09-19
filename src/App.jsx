@@ -1,7 +1,7 @@
 import './App.css';
 // import Cards from './Cards'
-import Eventscard from './Eventscard';
 // import Results from './Results'
+import Eventscard from './Eventscard';
 
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
     <>
   {/* <Cards></Cards> */}
   {/* <Results></Results> */}
-  <Eventscard></Eventscard>
+  {/* <Eventscard></Eventscard> */}
+  
   </>
   );
 }
