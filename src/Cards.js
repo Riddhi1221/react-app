@@ -2,7 +2,6 @@ import './App.css';
 import Card from './Components/Card';
 
 function Cards() {
-  console.log("this");
   return (
 
     <div className="w-100">
