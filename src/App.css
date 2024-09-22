@@ -71,3 +71,71 @@
     color: white;
     margin: 10px 0px;
 }
+
+
+/* web */
+.svg svg{
+    margin: 15px 20px;
+}
+.header ul li a{
+    margin: 0px 15px;
+    font-size: x-large;
+    font-weight: bold;
+    color: black !important;
+}
+.header li a:hover{
+    color:rgb(248, 118, 5) !important;
+}
+.header li span {
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(248, 118, 5);
+    margin: 20px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.header li span:hover{
+    background-color:rgb(248, 118, 5) ;
+    color: aliceblue;
+}
+.just-between{
+    justify-content: space-between;
+}
+.align-item{
+    align-items: center;
+}
+.main-header{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.main-header h1:hover{
+    color:rgb(248, 118, 5) ;
+}
+.full{
+    width: 100%;
+    background-color: rgb(33, 33, 33);
+}
+.img{
+    width: 40%;
+}
+.card1 img{
+    width: 100%;
+}
+.card1{
+    width: calc(50% - 22px);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgb(146, 144, 144);
+    background-color: rgb(56, 56, 56);
+}
+.text1{
+    width: 45%;
+    margin: 10px 20px;
+    color: aliceblue;
+}
+.text1 h1{
+    color: rgb(183, 184, 184);
+}

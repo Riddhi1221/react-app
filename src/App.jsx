@@ -2,7 +2,9 @@ import './App.css';
 // import Cards from './Cards'
 // import Results from './Results'
 // import Eventscard from './Eventscard';
-import Usestate from './Components/Usestate'
+// import Usestate from './Components/Usestate'
+// import BasicExample from './Components/BasicExample';
+import Main from './Components/Main'
 
 
 function App() {
@@ -12,8 +14,9 @@ function App() {
   {/* <Results></Results> */}
   {/* <Eventscard></Eventscard> */}
   {/* <h1>state in react</h1> */}
-     <Usestate />
-  
+     {/* <Usestate /> */}
+    {/* <BasicExample /> */}
+    <Main />
   
   </>
   );
