@@ -1,9 +1,11 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
 
-const Main = () => {
+
+const Support = () => {
   return (
     <div className="w-100">
-      <div className="flex just-between align-item">
+          <div className="flex just-between align-item">
         <div className="svg">
           <svg width="40" height="40" viewBox="0 0 50 50" fill="black">
             <path d="M22.0852 0.160518C16.4024 0.906765 11.4609 3.26988 7.50769 7.14463C4.09614 10.4836 1.80593 14.5114 0.656075 19.1994C0.161922
@@ -75,116 +77,20 @@ const Main = () => {
         </ul>
       </div>
       </div>
-      <div className="main-header">
-      <h1>The Rick and Morty API</h1>
+      <div className="suptitle">
+        <h1>Support The Rick and Morty API</h1>
+        <p><strong>Help to maintain The Rick and Morty API's infrastructure!</strong></p>
+        <p>If you are using the API for your app, your online tutorials or your coding challenges, please consider supporting us to help keep the project alive.</p>
+        <p>We are not getting any money from this and we use our free time to keep the API running and the data up to date. Every contribution, however big or small, is super valuable for our future.</p>
+        <p>Thanks!</p>
       </div>
-      <div className="full">
-        <div className="w-1140">
-          <div className="flex">
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/148.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Goddess Beth</h1>
-                <span >unknown - Mythological Creature</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Nuptia 4</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Big Trouble in Little Sanchez</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/354.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Toby Matthews</h1>
-                <span>Alive - Human</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Earth (Replacement Dimension)</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Big Trouble in Little Sanchez</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/421.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Rich Plutonian</h1>
-                <span>Alive - Alien</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Pluto</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Something Ricked This Way Comes</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/575.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Snake Resistance Robot</h1>
-                <span>Dead - Robot</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Earth (Replacement Dimension)</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Rattlestar Ricklactica</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/770.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Hothead Rick</h1>
-                <span>Dead - Human</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Earth (Replacement Dimension)</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Gotron Jerrysis Rickvangelion</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/787.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Two Crows</h1>
-                <span>Alive - Animal</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Rick and Two Crows Planet</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Forgetting Sarick Mortshall</a></h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="button">
+      <Button>
+      <a href="">Buy Me A Coffee</a>
+      </Button>
+      <Button>
+      <a href="">Buy Me A Coffee</a>
+      </Button>
       </div>
       <div className="full1  ">
         <div className="footer text-center">
@@ -219,4 +125,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Support

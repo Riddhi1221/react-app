@@ -3,11 +3,12 @@ import Accordion from 'react-bootstrap/Accordion';
 import Alert from 'react-bootstrap/Alert';
 import Badge from 'react-bootstrap/Badge';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Button from 'react-bootstrap/Button';
 
 function BasicExample() {
   return (
     <>
-    <Accordion defaultActiveKey="0">
+    {/* <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
         <Accordion.Body>
@@ -73,7 +74,13 @@ function BasicExample() {
         Library
       </Breadcrumb.Item>
       <Breadcrumb.Item active>Data</Breadcrumb.Item>
-    </Breadcrumb>
+    </Breadcrumb> */}
+    <Button variant="primary" size="lg" active>
+        Primary button
+      </Button>{' '}
+      <Button variant="secondary" size="lg" active>
+        Button
+      </Button>
       </>
   );
 }
