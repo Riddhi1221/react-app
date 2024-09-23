@@ -4,8 +4,8 @@ import './App.css';
 // import Eventscard from './Eventscard';
 // import Usestate from './Components/Usestate'
 // import BasicExample from './Components/BasicExample';
-// import Main from './Components/Main'
-import Support from './Components/Support';
+import Main from './Components/Main'
+// import Support from './Components/Support';
 
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
   {/* <Eventscard></Eventscard> */}
   {/* <h1>state in react</h1> */}
      {/* <Usestate /> */}
-    {/* <Main /> */}
     {/* <BasicExample /> */}
-    <Support/>
+    <Main />
+    {/* <Support/> */}
   
   </>
   );

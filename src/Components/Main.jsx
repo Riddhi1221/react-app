@@ -1,4 +1,5 @@
 import React from 'react'
+import Card1 from './Components/Card1'
 
 const Main = () => {
   return (
@@ -81,108 +82,12 @@ const Main = () => {
       <div className="full">
         <div className="w-1140">
           <div className="flex">
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/148.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Goddess Beth</h1>
-                <span >unknown - Mythological Creature</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Nuptia 4</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Big Trouble in Little Sanchez</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/354.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Toby Matthews</h1>
-                <span>Alive - Human</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Earth (Replacement Dimension)</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Big Trouble in Little Sanchez</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/421.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Rich Plutonian</h1>
-                <span>Alive - Alien</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Pluto</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Something Ricked This Way Comes</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/575.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Snake Resistance Robot</h1>
-                <span>Dead - Robot</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Earth (Replacement Dimension)</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Rattlestar Ricklactica</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/770.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Hothead Rick</h1>
-                <span>Dead - Human</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Earth (Replacement Dimension)</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Gotron Jerrysis Rickvangelion</a></h3>
-                </div>
-              </div>
-            </div>
-            <div className="card1 flex">
-              <div className="img">
-                <img src="https://rickandmortyapi.com/api/character/avatar/787.jpeg" alt="" />
-              </div>
-              <div className="text1">
-                <h1>Two Crows</h1>
-                <span>Alive - Animal</span>
-                <div className="section">
-                  <span>Last known location:</span>
-                  <h3><a href="">Rick and Two Crows Planet</a></h3>
-                </div>
-                <div className="section">
-                  <span>First seen in:</span>
-                  <h3><a href="">Forgetting Sarick Mortshall</a></h3>
-                </div>
-              </div>
-            </div>
+            <Card1 img="https://rickandmortyapi.com/api/character/avatar/148.jpeg" title="Goddess Beth" subtitle="unknown - Mythological Creature" head="Last known location:" hedtitle="Nuptia 4" head1="First seen in:" hedtitle1="Big Trouble in Little Sanchez"/>
+            <Card1 img="https://rickandmortyapi.com/api/character/avatar/354.jpeg" title="Toby Matthews" subtitle="Alive - Human" head="Last known location:" hedtitle="Earth (Replacement Dimension)" head1="First seen in:" hedtitle1="Big Trouble in Little Sanchez"/>
+            <Card1 img="https://rickandmortyapi.com/api/character/avatar/421.jpeg" title="Snake Resistance Robot" subtitle="Alive - Alien" head="Last known location:" hedtitle="Pluto" head1="First seen in:" hedtitle1="Something Ricked This Way Comes"/>
+            <Card1 img="https://rickandmortyapi.com/api/character/avatar/575.jpeg" title="Rich Plutonian" subtitle="Dead - Robot" head="Last known location:" hedtitle="Earth (Replacement Dimension)" head1="First seen in:" hedtitle1="Rattlestar Ricklactica"/>
+            <Card1 img="https://rickandmortyapi.com/api/character/avatar/770.jpeg" title="Hothead Rick" subtitle="Dead - Human" head="Last known location:" hedtitle="Earth (Replacement Dimension)" head1="First seen in:" hedtitle1="Gotron Jerrysis Rickvangelion"/>
+            <Card1 img="https://rickandmortyapi.com/api/character/avatar/787.jpeg" title="Two Crows" subtitle="Alive - Animal" head="Last known location:" hedtitle="Rick and Two Crows Planet" head1="First seen in:" hedtitle1="Forgetting Sarick Mortshall"/>
           </div>
         </div>
       </div>

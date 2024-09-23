@@ -147,14 +147,14 @@
     color: rgb(248, 118, 5);
 }
 .text1 span{
-    font-size: 20px;
+    font-size: 18px;
 }
 .section{
     margin: 17px 0px !important;
 }
 .status_icon  {
-    width: 1px;
-    height: 1px;
+    width: 10px;
+    height: 10px;
     margin-right: 3px;
     background: rgb(85, 204, 68);
     border-radius: 50%;
