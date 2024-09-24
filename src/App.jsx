@@ -4,8 +4,9 @@ import './App.css';
 // import Eventscard from './Eventscard';
 // import Usestate from './Components/Usestate'
 // import BasicExample from './Components/BasicExample';
-import Main from './Components/Main'
+// import Main from './Components/Main'
 // import Support from './Components/Support';
+import MainWeb from './Components/Pages/MainWeb';
 
 
 function App() {
@@ -17,8 +18,10 @@ function App() {
   {/* <h1>state in react</h1> */}
      {/* <Usestate /> */}
     {/* <BasicExample /> */}
-    <Main />
+    {/* <Main /> */}
     {/* <Support/> */}
+    <MainWeb />
+
   
   </>
   );

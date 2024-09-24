@@ -1,70 +1,69 @@
-/* card */ 
+/* card */
 
-.w-100{
+.w-100 {
     width: 100%;
     height: 100vh;
 }
-.w-1140{
-  width: 1140px; 
-  margin: auto!important;
+.w-1140 {
+    width: 1140px;
+    margin: auto !important;
 }
-.flex{
+.flex {
     display: flex;
     flex-wrap: wrap;
 }
-.card{
+.card {
     width: calc(33.33% - 22px);
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 10px rgb(146, 144, 144);
 }
-.card img{
+.card img {
     width: 100%;
     border-bottom: 1px solid rgb(118, 117, 117);
 }
-.card h2{
-    padding: 10px; 
-} 
+.card h2 {
+    padding: 10px;
+}
 
- /* event  */
+/* event  */
 
-
-.event{
+.event {
     width: calc(33.33% - 22px);
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 10px rgb(146, 144, 144);   
+    box-shadow: 2px 2px 10px rgb(146, 144, 144);
 }
-.event img{
+.event img {
     width: 100%;
-    border-bottom: 1px solid rgb(118, 117, 117);   
+    border-bottom: 1px solid rgb(118, 117, 117);
 }
-.text{
-    margin: 10px 20px ;
-} 
-.event ul{
+.text {
+    margin: 10px 20px;
+}
+.event ul {
     border-bottom: 1px solid black;
     margin: 10px 0px;
 }
-.event h2{
+.event h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.event ul li a{
+.event ul li a {
     color: rgb(218, 156, 13);
     font-size: 18px;
     font-weight: 500;
 }
-.event p{
+.event p {
     color: rgb(139, 141, 143);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.event button{
+.event button {
     width: 90px;
     height: 40px;
     background-color: rgb(18, 18, 100);
@@ -72,19 +71,18 @@
     margin: 10px 0px;
 }
 
-
 /* web */
-.svg svg{
+.svg svg {
     margin: 15px 20px;
 }
-.header ul li a{
+.header ul li a {
     margin: 0px 15px;
     font-size: x-large;
     font-weight: bold;
     color: black !important;
 }
-.header li a:hover{
-    color:rgb(248, 118, 5) !important;
+.header li a:hover {
+    color: rgb(248, 118, 5) !important;
 }
 .header li span {
     width: 10px;
@@ -95,39 +93,39 @@
     border-radius: 10px;
     font-size: 18px;
 }
-.header li span:hover{
-    background-color:rgb(248, 118, 5) ;
+.header li span:hover {
+    background-color: rgb(248, 118, 5);
     color: aliceblue;
 }
-.just-between{
+.just-between {
     justify-content: space-between;
 }
-.align-item{
+.align-item {
     align-items: center;
 }
-.main-header{
+.main-header {
     text-align: center;
     font-size: 50px;
     font-weight: bolder;
     margin: 50px 0px 50px 0px;
 }
-.main-header h1:hover{
-    color:rgb(248, 118, 5) ;
+.main-header h1:hover {
+    color: rgb(248, 118, 5);
 }
-.full{
+.full {
     width: 100%;
     background-color: rgb(33, 33, 33);
     padding: 80px 0px;
 }
-.img{
+.img {
     width: 40%;
 }
-.card1 img{
+.card1 img {
     width: 100%;
     height: 100%;
-    background-size: cover !important ;
+    background-size: cover !important;
 }
-.card1{
+.card1 {
     width: calc(50% - 32px);
     margin: 15px;
     border-radius: 10px;
@@ -135,122 +133,155 @@
     box-shadow: 1px 1px 5px rgb(26, 26, 26);
     background-color: rgb(56, 56, 56);
 }
-.text1{
+.text1 {
     width: 54%;
     margin: 10px 10px 10px 20px;
     color: rgb(222, 224, 226);
 }
-.text1 h1{
+.text1 h1 {
     color: rgb(249, 251, 251);
 }
-.text1 h1:hover{
+.text1 h1:hover {
     color: rgb(248, 118, 5);
 }
-.text1 span{
+.text1 span {
     font-size: 18px;
 }
-.section{
+.section {
     margin: 17px 0px !important;
 }
-.status_icon  {
+.status_icon {
     width: 10px;
     height: 10px;
     margin-right: 3px;
     background: rgb(85, 204, 68);
     border-radius: 50%;
 }
-.section span{
+.section span {
     font-size: 17px;
     font-weight: 500;
     color: rgb(168, 167, 167);
 }
-.section h3 a{
+.section h3 a {
     color: rgb(245, 245, 245);
 }
-.section h3 a:hover{
+.section h3 a:hover {
     color: rgb(248, 118, 5);
 }
-.full1{
+.full1 {
     width: 100%;
     background-color: rgb(44, 44, 44);
     padding: 100px 0px;
 }
-.text-center{
+.text-center {
     text-align: center !important;
 }
-.footer ul li span{
+.footer ul li span {
     color: rgb(153, 153, 153);
     font-size: larger;
     margin: 0px 10px;
 }
-.footer ul li span:hover{
+.footer ul li span:hover {
     color: rgb(248, 118, 5);
 }
-.just-center{
+.just-center {
     justify-content: center;
 }
-.server{
+.server {
     margin-top: 5px;
 }
-.server span{
+.server span {
     font-size: 20px;
     color: rgb(153, 153, 153);
 }
-.server span:hover{
+.server span:hover {
     color: rgb(248, 118, 5);
 }
 .logo {
     margin: 20px 0px 30px 0px;
 }
-.logo svg{
+.logo svg {
     margin: 0px 20px;
 }
 .logo2 {
     margin: 10px 0px 15px 0px;
 }
-.logo2 ul li a svg{
+.logo2 ul li a svg {
     margin: 0px 30px;
     font-size: x-large;
     color: rgb(153, 153, 153);
 }
-.logo2 ul li a svg:hover{
+.logo2 ul li a svg:hover {
     color: rgb(248, 118, 5);
 }
-.footer-end span{
-    color:rgb(153, 153, 153) ;
+.footer-end span {
+    color: rgb(153, 153, 153);
 }
-.footer-end a{
-    color:white ;
+.footer-end a {
+    color: white;
     border-bottom: 1px solid rgb(248, 118, 5);
     margin: 0px 5px 0px 0px;
 }
-.footer-end a:hover{
+.footer-end a:hover {
     color: rgb(248, 118, 5);
     border-bottom: none;
 }
 
-
 /* support */
-.suptitle{
-    margin:0px 340px;  
+.suptitle {
+    margin: 0px 340px;
 }
-
-.suptitle h1{
+.suptitle h1 {
     font-size: 45px;
     font-weight: bolder;
     margin: 40px 0px 30px 0px;
 }
-.suptitle p{
+.suptitle p {
     font-size: 20px;
     margin: 15px 0px;
     color: rgb(96, 95, 95);
 }
-.suptitle p strong{
+.suptitle p strong {
     color: rgb(74, 74, 74);
 }
-.button{
-    margin:0px 340px;  
+.button {
+    margin: 0px 340px;
 }
-.button button a{
+.button button a {
     margin: 0px 10px;
+}
+
+/* mainweb  */
+nav {
+    background-color: #0cf27b;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li:hover {
+    color: black;
+    background-color: aliceblue;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a,
+nav ul li button {
+    color: rgb(81, 7, 253);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 }
