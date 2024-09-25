@@ -252,7 +252,7 @@
 }
 
 /* mainweb  */
-nav {
+/* nav {
     background-color: #0cf27b;
     padding: 10px;
 }
@@ -262,11 +262,8 @@ nav ul {
     justify-content: space-around;
 }
 nav ul li:hover {
-    color: black;
+    color: black !important;
     background-color: aliceblue;
-}
-nav ul li {
-    position: relative;
 }
 nav ul li a,
 nav ul li button {
@@ -274,9 +271,9 @@ nav ul li button {
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
-}
+}*/
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
@@ -284,4 +281,4 @@ nav ul li button {
         width: 100%;
         text-align: center;
     }
-}
+}  */

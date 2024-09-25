@@ -5,10 +5,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Home from './Home'
-import About from './About';
-import Blog from './Blog';
-import Contact from './Contact';
+import Main from '../Main';
+import Support from '../Support';
+// import Blog from './Blog';
+// import Contact from './Contact';
 
 const MainWeb = () => {
   return (
@@ -16,37 +16,36 @@ const MainWeb = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Home</Link> {/* Use text or labels inside Link */}
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/support">Support</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/blog">Blog</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
+
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Main />
         </Route>
-        <Route path="/about">
-          <About />
+        <Route path="/support">
+          <Support />
         </Route>
-        <Route path="/blog">
+        {/* <Route path="/blog">
           <Blog />
         </Route>
         <Route path="/contact">
           <Contact />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );
 };
 
 export default MainWeb;
-
-  
