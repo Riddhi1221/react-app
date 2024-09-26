@@ -16,7 +16,7 @@ const MainWeb = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link> {/* Use text or labels inside Link */}
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/support">Support</Link>

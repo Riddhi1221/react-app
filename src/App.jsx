@@ -6,7 +6,8 @@ import './App.css';
 // import BasicExample from './Components/BasicExample';
 // import Main from './Components/Main'
 // import Support from './Components/Support';
-import MainWeb from './Components/Pages/MainWeb';
+// import MainWeb from './Components/Pages/MainWeb';
+import MuiExample from './Components/MuiExample';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
     {/* <BasicExample /> */}
     {/* <Main /> */}
     {/* <Support/> */}
-    <MainWeb />
+    {/* <MainWeb /> */}
+    <MuiExample />
 
   
   </>
