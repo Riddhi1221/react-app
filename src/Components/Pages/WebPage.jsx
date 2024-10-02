@@ -16,7 +16,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CardActionArea from '@mui/material/CardActionArea';
 import CastIcon from '@mui/icons-material/Cast';
-import CoPresentRoundedIcon from '@mui/icons-material/CoPresentRounded';
+// import CoPresentRoundedIcon from '@mui/icons-material/CoPresentRounded';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid2';
 
 
 const pages = ['Home', 'Service', 'Portfolio', 'Team', 'Testimonial', 'Blog', 'Contact'];
@@ -63,6 +65,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  ...theme.applyStyles('dark', {
+    backgroundColor: '#1A2027',
+  }),
+}));
+
 function WebPage() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -85,7 +98,7 @@ function WebPage() {
 
   return (
     <>
-      <AppBar position="relative" className="hero" sx={{ backgroundImage: 'url(https://trydo.rainbowit.net/assets/images/bg/bg-image-26.jpg)' ,backgroundAttachment : 'scroll'}}>
+      <AppBar position="relative" className="hero" sx={{ backgroundImage: 'url(https://trydo.rainbowit.net/assets/images/bg/bg-image-26.jpg)', backgroundAttachment: 'scroll' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <img src="https://trydo.rainbowit.net/assets/images/logo/logo-light.png" alt="Logo" />
@@ -168,7 +181,7 @@ function WebPage() {
               </Menu>
             </Box>
           </Toolbar>
-          <Box className="header" sx={{zIndex : 999,position : "relative"}}>
+          <Box className="header" sx={{ zIndex: 999, position: "relative" }}>
             <h1>Creative</h1>
             <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.</p>
             <button>Contact Us</button>
@@ -176,49 +189,287 @@ function WebPage() {
         </Container>
       </AppBar>
 
-      <Container sx={{ display: 'flex', gap: '30px' }}>
-      <Card sx={{ maxWidth: 345, margin: '70px 0px 30px 0px' }}>
-      <CardActionArea
-        sx={{
-          '&:hover': {
-            backgroundColor: 'red',
-            color: 'white',
+      <Box >
+        <Container>
+      <Grid Container spacing={{ xs: 2, md: 3 }}   columns={{ xs: 4, sm: 8, md: 12 }} sx={{ display: 'flex', flexWrap :'wrap', margin : '40px 0px 40px 0px'}}>
+      <Grid size={{ sx :3, xs: 2, sm: 3, md: 3 }}>
+        <Item> 
+           <Card sx={{
+          maxWidth: 345,
+          margin: '20px 0px 0px 0px',
+          // boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',                    
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
           },
         }}
-      >
-        <CastIcon
-          sx={{
-            margin: '10px 17px 0px 17px',
-            fontSize: '45px',
-            color: 'red',
-            '&:hover': {
-              color: 'white', // Fixed the property name to 'color'
-            },
-          }}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
-            Business Strategy
-          </Typography>
-          <Typography
-            variant="body2"
+        >
+          <CardActionArea
             sx={{
-              fontSize: '18px',
-              color: 'rgb(138, 135, 135, 0.95)', // Adjusted color opacity syntax
+              '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },
             }}
           >
-            I throw myself down among the tall grass by the stream as I lie close to the earth.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-        <Card sx={{ maxWidth: 345, margin: '70px 0px 30px 0px' }}>
-          <CardActionArea>
-            {/* <CardMedia> */}
+            <CastIcon
+              sx={{
+                margin: '10px 17px 0px 17px',
+                fontSize: '45px',
+                color: 'red',
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Strategy
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '18px',
+                  color: 'rgb(138, 135, 135, 0.95)', 
+                }}
+              >
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        </Item>
+        </Grid> 
+        <Grid size={{ xs: 2, sm: 4, md: 4 }}>
+        <Item> 
+           <Card sx={{
+          maxWidth: 345,
+          margin: '20px 0px 0px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',                    
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          },
+        }}
+        >
+          <CardActionArea
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },
+            }}
+          >
+            <CastIcon
+              sx={{
+                margin: '10px 17px 0px 17px',
+                fontSize: '45px',
+                color: 'red',
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Strategy
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '18px',
+                  color: 'rgb(138, 135, 135, 0.95)', 
+                }}
+              >
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        </Item>
+        </Grid> 
+        <Grid size={{ xs: 2, sm: 4, md: 4 }}>
+        <Item> 
+           <Card sx={{
+          maxWidth: 345,
+          margin: '20px 0px 0px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',                    
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          },
+        }}
+        >
+          <CardActionArea
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },
+            }}
+          >
+            <CastIcon
+              sx={{
+                margin: '10px 17px 0px 17px',
+                fontSize: '45px',
+                color: 'red',
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Strategy
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '18px',
+                  color: 'rgb(138, 135, 135, 0.95)', 
+                }}
+              >
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        </Item>
+        </Grid> 
+        <Grid size={{ xs: 2, sm: 4, md: 4 }}>
+        <Item> 
+           <Card sx={{
+          maxWidth: 345,
+          margin: '20px 0px 0px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',                    
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          },
+        }}
+        >
+          <CardActionArea
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },
+            }}
+          >
+            <CastIcon
+              sx={{
+                margin: '10px 17px 0px 17px',
+                fontSize: '45px',
+                color: 'red',
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Strategy
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '18px',
+                  color: 'rgb(138, 135, 135, 0.95)', 
+                }}
+              >
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        </Item>
+        </Grid> 
+        <Grid size={{ xs: 2, sm: 4, md: 4 }}>
+        <Item> 
+           <Card sx={{
+          maxWidth: 345,
+          margin: '20px 0px 0px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',                    
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          },
+        }}
+        >
+          <CardActionArea
+            sx={{
+              '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },
+            }}
+          >
+            <CastIcon
+              sx={{
+                margin: '10px 17px 0px 17px',
+                fontSize: '45px',
+                color: 'red',
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Strategy
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: '18px',
+                  color: 'rgb(138, 135, 135, 0.95)', 
+                }}
+              >
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        </Item>
+        </Grid> 
+        </Grid>
+        </Container>
+        </Box>
+        {/* <Card sx={{   maxWidth: 345,
+          margin: '70px 0px 30px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',            
+              fontSize: '1.2rem',        
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          }, }}>
+          <CardActionArea  sx={{   '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },}}>
             <CoPresentRoundedIcon sx={{ margin: ' 10px 17px 0px 17px', fontSize: '45px', color: 'red' }} />
-            {/* </CardMedia> */}
-
-            <CardContent>
+              <CardContent>
               <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
                 Business Stratagy
               </Typography>
@@ -228,11 +479,27 @@ function WebPage() {
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ maxWidth: 345, margin: '70px 0px 30px 0px' }}>
-          <CardActionArea>
-            {/* <CardMedia> */}
+        <Card sx={{  maxWidth: 345,
+          margin: '70px 0px 30px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',            
+              fontSize: '1.2rem',        
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          }, }}>
+          <CardActionArea sx={{   '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },}}>
+          
             <CastIcon sx={{ margin: ' 10px 17px 0px 17px', fontSize: '45px', color: 'red' }} />
-            {/* </CardMedia> */}
+           
 
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
@@ -244,7 +511,103 @@ function WebPage() {
             </CardContent>
           </CardActionArea>
         </Card>
-      </Container>
+        <Card sx={{  maxWidth: 345,
+          margin: '70px 0px 30px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',            
+              fontSize: '1.2rem',        
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          }, }}>
+          <CardActionArea sx={{   '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },}}>
+          
+            <CastIcon sx={{ margin: ' 10px 17px 0px 17px', fontSize: '45px', color: 'red' }} />
+           
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Stratagy
+              </Typography>
+              <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '18px', color: 'rgb(138 135 135 / 95%)' }}>
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{  maxWidth: 345,
+          margin: '70px 0px 30px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',            
+              fontSize: '1.2rem',        
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          }, }}>
+          <CardActionArea sx={{   '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },}}>
+          
+            <CastIcon sx={{ margin: ' 10px 17px 0px 17px', fontSize: '45px', color: 'red' }} />
+         
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Stratagy
+              </Typography>
+              <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '18px', color: 'rgb(138 135 135 / 95%)' }}>
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{  maxWidth: 345,
+          margin: '70px 0px 30px 0px',
+          boxShadow: 3,
+          borderRadius: 2,
+          ':hover': {
+            boxShadow: 6, 
+            '& .MuiTypography-root': {  
+              color: 'white',            
+              fontSize: '1.2rem',        
+            },
+            '& .MuiSvgIcon-root' : {
+              color : "white"
+            }
+          }, }}>
+          <CardActionArea sx={{   '&:hover': {
+                backgroundColor: 'red',
+                color: 'white',
+              },}}>
+        
+            <CastIcon sx={{ margin: ' 10px 17px 0px 17px', fontSize: '45px', color: 'red' }} />
+    
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px' }}>
+                Business Stratagy
+              </Typography>
+              <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '18px', color: 'rgb(138 135 135 / 95%)' }}>
+                I throw myself down among the tall grass by the stream as I lie close to the earth.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card> */}
+     
 
 
 

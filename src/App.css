@@ -329,3 +329,8 @@ nav ul li button {
     background-color: red;
     border: none;
 }
+
+.css-o7gaq3-MuiPaper-root{
+    box-shadow: none !important;
+    text-align: left !important;
+}
