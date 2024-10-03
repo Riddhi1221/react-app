@@ -314,8 +314,8 @@ nav ul li button {
     margin-top: 80px;
 }
 .header p{
-    font-size: 30px;
-    background-color: rgba(192, 195, 198, 0.468);
+    font-size: 27px;
+    letter-spacing: 2px;
 }
 .header button{
     border: 1px solid white;
