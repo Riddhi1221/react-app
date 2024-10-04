@@ -13,22 +13,17 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import CardActionArea from '@mui/material/CardActionArea';
 import CastIcon from '@mui/icons-material/Cast';
-// import CoPresentRoundedIcon from '@mui/icons-material/CoPresentRounded';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const pages = ['Home', 'Service', 'Portfolio', 'Team', 'Testimonial', 'Blog', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const gggg = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -83,79 +78,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-const itemData = [
-  {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
-    author: '@rollelflex_graphy726',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
-    author: '@helloimnik',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-    author: '@nolanissac',
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-    author: '@katie_wasserman',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-    author: '@silverdalex',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-    author: '@peterlaster',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
-    author: '@southside_customs',
-    cols: 2,
-  },
-];
 
 function WebPage() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -165,9 +87,9 @@ function WebPage() {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -175,6 +97,14 @@ function WebPage() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
   };
 
   return (
@@ -254,7 +184,7 @@ function WebPage() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
+                {gggg.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
@@ -619,33 +549,45 @@ function WebPage() {
         </Box>
         <Box>
           <Container>
-          <ImageList sx={{ width: 500, height: 450 }}>
-      <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div">December</ListSubheader>
-      </ImageListItem>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            alt={item.title}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title={item.title}
-            subtitle={item.author}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.title}`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+            <Box className="slider-container">
+            <Slider {...settings}>
+        <Box className='sliders' sx={{padding:'0px 10px 0px 10px'}}>
+          <Box className='slider-s' sx={{ zIndex: 999 , position :'absolute'} }>
+          <h5 style={{fontSize : '18px',margin : '20px 0px 20px',color:'white'}}>Development</h5>
+          <h3 style={{fontSize : '25px' , color :'white'}}>Getting tickets to the big show</h3>
+          <button className='sliderbtn' >Case Study</button>
+          </Box>
+        </Box>
+        <Box className='sliders-1'>
+          <Box className='slider-s-1' sx={{ zIndex: 999 , position :'absolute'} }>
+          <h5 style={{fontSize : '18px',margin : '20px 0px 20px',color:'white'}}>Development</h5>
+          <h3 style={{fontSize : '25px' , color :'white'}}>Getting tickets to the big show</h3>
+          <button className='sliderbtn' >Case Study</button>
+          </Box>
+        </Box>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+        <div>
+          <h3>7</h3>
+        </div>
+        <div>
+          <h3>8</h3>
+        </div>
+        <div>
+          <h3>9</h3>
+        </div>
+      </Slider>
+            </Box>
           </Container>
         </Box>
     </>
