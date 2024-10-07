@@ -105,6 +105,7 @@ function WebPage() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3
+  
   };
 
   return (
@@ -551,8 +552,15 @@ function WebPage() {
           <Container>
             <Box className="slider-container">
             <Slider {...settings}>
-        <Box className='sliders' sx={{padding:'0px 10px 0px 10px'}}>
+        <Box className='sliders' sx={{}}>
           <Box className='slider-s' sx={{ zIndex: 999 , position :'absolute'} }>
+          <h5 style={{fontSize : '18px',margin : '20px 0px 20px',color:'white'}}>Development</h5>
+          <h3 style={{fontSize : '25px' , color :'white'}}>Getting tickets to the big show</h3>
+          <button className='sliderbtn' >Case Study</button>
+          </Box>
+        </Box>
+        <Box className='sliders-1'>
+          <Box className='slider-s-1' sx={{ zIndex: 999 , position :'absolute',marginLeft:'20px'} }>
           <h5 style={{fontSize : '18px',margin : '20px 0px 20px',color:'white'}}>Development</h5>
           <h3 style={{fontSize : '25px' , color :'white'}}>Getting tickets to the big show</h3>
           <button className='sliderbtn' >Case Study</button>
@@ -565,9 +573,6 @@ function WebPage() {
           <button className='sliderbtn' >Case Study</button>
           </Box>
         </Box>
-        <div>
-          <h3>3</h3>
-        </div>
         <div>
           <h3>4</h3>
         </div>
