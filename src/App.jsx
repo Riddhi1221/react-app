@@ -7,8 +7,9 @@ import './App.css';
 // import Main from './Components/Main'
 // import Support from './Components/Support';
 // import MainWeb from './Components/Pages/MainWeb';
-import MuiExample from './Components/MuiExample';
-import WebPage from './Components/Pages/WebPage';
+// import MuiExample from './Components/MuiExample';
+// import WebPage from './Components/Pages/WebPage';
+import Inputresult from './Components/Inputresult';
 
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
     {/* <Support/> */}
     {/* <MainWeb /> */}
     {/* <MuiExample /> */}
-    <WebPage />
-
+    {/* <WebPage /> */}
+    <Inputresult />
   
   </>
   );
