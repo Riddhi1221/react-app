@@ -10,6 +10,7 @@ import './App.css';
 // import MuiExample from './Components/MuiExample';
 // import WebPage from './Components/Pages/WebPage';
 import Inputresult from './Components/Inputresult';
+import Sortingvalue from './Components/Sortingvalue';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
     {/* <MuiExample /> */}
     {/* <WebPage /> */}
     <Inputresult />
+    <Sortingvalue />
+
   
   </>
   );

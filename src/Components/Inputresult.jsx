@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 
 // Student Result CRUD Component
 function App() {
-  const [students, setStudents] = useState([]);
   const [name, setName] = useState('');
   const [subject1, setSubject1] = useState('');
   const [subject2, setSubject2] = useState('');
   const [subject3, setSubject3] = useState('');
   const [subject4, setSubject4] = useState('');
   const [subject5, setSubject5] = useState('');
+  const [students, setStudents] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
 
   const handleSubmit = (event) => {
@@ -62,6 +62,8 @@ function App() {
     const updatedStudents = [...students];
     updatedStudents.splice(index, 1);
     setStudents(updatedStudents);
+    console.log();
+    
      
   };
 
