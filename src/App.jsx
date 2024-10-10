@@ -9,7 +9,7 @@ import './App.css';
 // import MainWeb from './Components/Pages/MainWeb';
 // import MuiExample from './Components/MuiExample';
 // import WebPage from './Components/Pages/WebPage';
-import Inputresult from './Components/Inputresult';
+// import Inputresult from './Components/Inputresult';
 import Sortingvalue from './Components/Sortingvalue';
 
 
@@ -27,7 +27,7 @@ function App() {
     {/* <MainWeb /> */}
     {/* <MuiExample /> */}
     {/* <WebPage /> */}
-    <Inputresult />
+    {/* <Inputresult /> */}
     <Sortingvalue />
 
   

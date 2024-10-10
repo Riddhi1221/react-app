@@ -573,9 +573,13 @@ function WebPage() {
           <button className='sliderbtn' >Case Study</button>
           </Box>
         </Box>
-        <div>
-          <h3>4</h3>
-        </div>
+        <Box className='sliders-1'>
+          <Box className='slider-s-1' sx={{ zIndex: 999 , position :'absolute'} }>
+          <h5 style={{fontSize : '18px',margin : '20px 0px 20px',color:'white'}}>Development</h5>
+          <h3 style={{fontSize : '25px' , color :'white'}}>Getting tickets to the big show</h3>
+          <button className='sliderbtn' >Case Study</button>
+          </Box>
+        </Box>
         <div>
           <h3>5</h3>
         </div>

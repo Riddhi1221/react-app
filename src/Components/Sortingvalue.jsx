@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import CreateIcon from '@mui/icons-material/Create';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Sortingvalue = () => {
   const [active, setActive] = useState("All");
@@ -63,28 +65,55 @@ const Sortingvalue = () => {
   return (
     <div style={{ padding: '20px' }}>
       <h1>Storing Value</h1>
-      <h2>Category List</h2>
-      <button onClick={() => setActive('All')} className={active === 'All' ? 'active' : ''}>
-        All
-      </button>
-      <button onClick={() => setActive('Animal')} className={active === 'Animal' ? 'active' : ''}>
-        Animal
-      </button>
-      <button onClick={() => setActive('flower')} className={active === 'flower' ? 'active' : ''}>
-        Flower
-      </button>
-      <button onClick={() => setActive('Car')} className={active === 'Car' ? 'active' : ''}>
-        Car
-      </button>
-      <button onClick={() => setActive('Bird')} className={active === 'Bird' ? 'active' : ''}>
-        Bird
-      </button>
-      <button onClick={() => setActive('Ornament')} className={active === 'Ornament' ? 'active' : ''}>
-        Ornament
-      </button>
-
-      <button onClick={handleAdd} style={{ marginBottom: '10px' }}>Add New Item</button>
       
+      <table style={{ width: '100%', borderCollapse: 'collapse', margin: '30px 0px' }}>
+        <thead>
+          <tr>
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={() => setActive('All')} className={active === 'All' ? 'active' : ''}
+         style={{
+          backgroundColor: active === 'All' ? 'red' : 'white',color: active === 'All' ? 'white' : 'black', border: active === 'All' ?'none' : 'none',
+        }}>
+        All
+      </button></th>
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={() => setActive('Animal')} className={active === 'Animal' ? 'active' : ''}     style={{
+                backgroundColor: active === 'Animal' ? 'red' : 'white',color: active === 'Animal' ? 'white' : 'black', border: active === 'Animal' ?'none' : 'none',
+              }}>
+        Animal
+      </button></th>
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={() => setActive('flower')} className={active === 'flower' ? 'active' : ''}
+         style={{
+          backgroundColor: active === 'flower' ? 'red' : 'white',color: active === 'flower' ? 'white' : 'black', border: active === 'flower' ?'none' : 'none',
+        }}>
+        Flower
+      </button></th>
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={() => setActive('Car')} className={active === 'Car' ? 'active' : ''}
+       style={{
+        backgroundColor: active === 'Car' ? 'red' : 'white',color: active === 'Car' ? 'white' : 'black', border: active === 'Car' ?'none' : 'none',
+      }}>
+        Car
+      </button></th>
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={() => setActive('Bird')} className={active === 'Bird' ? 'active' : ''}
+       style={{
+        backgroundColor: active === 'Bird' ? 'red' : 'white',color: active === 'Bird' ? 'white' : 'black', border: active === 'Bird' ?'none' : 'none',
+      }}>
+        Bird
+      </button></th>
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={() => setActive('Ornament')} className={active === 'Ornament' ? 'active' : ''}
+       style={{ padding:'10px 20px',
+        backgroundColor: active === 'Ornament' ? 'red' : 'white',color: active === 'Ornament' ? 'white' : 'black', border: active === 'Ornament' ?'none' : 'none',
+      }}>
+      Ornament
+      </button></th>
+
+      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={handleAdd} style={{ marginBottom: '10px',
+        backgroundColor: active === 'Ornament' ? 'red' : 'white',color: active === 'Ornament' ? 'white' : 'black', border: active === 'Ornament' ?'none' : 'none',
+      }}>Add New Item</button>
+      </th>
+
+      </tr>
+        </thead>
+        </table>
+        <h2 >Category List</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -99,8 +128,8 @@ const Sortingvalue = () => {
               <td style={{ border: '1px solid black', padding: '8px' }}>{item.Name}</td>
               <td style={{ border: '1px solid black', padding: '8px' }}>{item.Category}</td>
               <td style={{ border: '1px solid black', padding: '8px' }}>
-                <button onClick={() => handleEdit(index)} style={{ marginRight: '10px' }}>Edit</button>
-                <button onClick={() => handleDelete(index)}>Delete</button>
+                <button onClick={() => handleEdit(index)} style={{ marginRight: '10px',background:'none',border:'0px' }}><CreateIcon  sx={{fontSize: '30px 0px'}}/></button>
+                <button  onClick={() => handleDelete(index)} style={{background:'none',border:'0px' }}><DeleteIcon sx={{fontSize: '30px 0px'}}/></button>
               </td>
             </tr>
           ))}
