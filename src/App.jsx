@@ -10,7 +10,9 @@ import './App.css';
 // import MuiExample from './Components/MuiExample';
 // import WebPage from './Components/Pages/WebPage';
 // import Inputresult from './Components/Inputresult';
-import Sortingvalue from './Components/Sortingvalue';
+// import Sortingvalue from './Components/Sortingvalue';
+import Searchdata from './Components/Searchdata';
+// import Fly from './Components/Fly';
 
 
 function App() {
@@ -28,7 +30,9 @@ function App() {
     {/* <MuiExample /> */}
     {/* <WebPage /> */}
     {/* <Inputresult /> */}
-    <Sortingvalue />
+    {/* <Sortingvalue /> */}
+    <Searchdata />
+    {/* <Fly /> */}
 
   
   </>

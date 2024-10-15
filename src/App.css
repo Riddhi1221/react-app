@@ -513,3 +513,33 @@ nav ul li button {
     background-color: red;
     border: none;
 }
+
+.svg-img .fill-current{
+    fill: currentColor;
+}
+.header-fly{
+  width: 50%;
+  text-align: center;  
+  margin: auto;
+  padding-bottom: 100px;
+}
+.header-fly h1{
+    color: rgb(40 25 80);
+    opacity: 1;
+    font-size: 60px;
+}
+.text-navy{
+    color: rgb(40 25 80);
+}
+.header-fly p{
+    color: rgba(98, 98, 98, 0.57);
+}
+.header-fly .color{
+    background: rgb(134,62,194);
+background: linear-gradient(90deg, rgba(134,62,194,1) 0%, rgba(105,70,202,1) 12%, rgba(169,78,210,1) 28%, rgba(135,83,224,1) 46%, rgba(68,88,237,1) 64%, rgba(55,115,241,1) 75%, rgba(16,13,252,1) 87%, rgba(0,14,255,1) 100%);
+border-radius: 30px;
+padding: 10px 30px;
+font-size: 13px;
+border: none;
+margin: 15px 0px;
+}
