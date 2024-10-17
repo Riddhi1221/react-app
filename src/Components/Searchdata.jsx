@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
 import CreateIcon from '@mui/icons-material/Create';
 import DeleteIcon from '@mui/icons-material/Delete';
-import SearchIcon from '@mui/icons-material/Search';
 
 const Searchdata = () => {
   const [active, setActive] = useState("All");
@@ -34,8 +35,9 @@ const Searchdata = () => {
   ];
 
   const [data, setData] = useState(initialData);
+  const [filter, setFilter] = useState(data)
+  const [search, setSearch] = useState("")
 
-  // Filter data based on active category
   const filteredData = active === "All" ? data : data.filter(item => item.Category === active);
 
   const handleDelete = (index) => {
@@ -63,12 +65,14 @@ const Searchdata = () => {
     }
   };
   const handleSearch = () => {
-    const searchCategory = prompt("Enter the Searching category:");
-    if (searchCategory) {
-      const updatedData = data.filter((item) => item.Category === searchCategory);
-      setData(updatedData);
-    }
+    const searchCategory = search
+    const datafilter =data.filter(el => el.Name.toLowerCase().includes(searchCategory.toLowerCase()) || el.Category.toLowerCase().includes(searchCategory.toLowerCase()))
+    setFilter(datafilter);
   };
+
+  useEffect(() => {
+    handleSearch()
+  }, [search])
   
 
   return (
@@ -113,14 +117,13 @@ const Searchdata = () => {
       }}>
       Ornament
       </button></th>
-
       <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={handleAdd} style={{ marginBottom: '10px',
         backgroundColor: active === 'handleAdd' ? 'red' : 'white',color: active === 'handleAdd' ? 'white' : 'black', border: active === 'handleAdd' ?'none' : 'none',
       }}>Add New Item</button>
       </th>
-      <th style={{ border: '1px solid black', padding: '8px' }}><button onClick={handleSearch} style={{ marginBottom: '10px',
-        backgroundColor: active === 'handlesearch' ? 'red' : 'white',color: active === 'handlesearch' ? 'white' : 'black', border: active === 'handlesearch' ?'none' : 'none',
-      }}><SearchIcon sx={{fontSize: '30px 0px'}}/></button>
+      <th style={{ border: '1px solid black', padding: '8px' }}>   
+        <input type="text" placeholder='search' value={search} onChange={e => setSearch(e.target.value)} />
+        
       </th>
 
       </tr>
@@ -129,14 +132,14 @@ const Searchdata = () => {
         <h2 >Category List</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
-          <tr>
+          <tr style={{color: 'white' , backgroundColor:'black'}}>
             <th style={{ border: '1px solid black', padding: '8px' }}>Name</th>
             <th style={{ border: '1px solid black', padding: '8px' }}>Category</th>
             <th style={{ border: '1px solid black', padding: '8px' }}>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((item, index) => (
+          {filter.map((item, index) => (
             <tr key={index}>
               <td style={{ border: '1px solid black', padding: '8px' }}>{item.Name}</td>
               <td style={{ border: '1px solid black', padding: '8px' }}>{item.Category}</td>
@@ -153,3 +156,4 @@ const Searchdata = () => {
 };
 
 export default Searchdata;
+
