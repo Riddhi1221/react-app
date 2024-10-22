@@ -1,5 +1,11 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 const Support = () => {
@@ -71,7 +77,7 @@ const Support = () => {
         </div>
         <div className="header">
         <ul className="flex">
-          <li><a href="">Docs</a></li>
+          <li> <Link to="/">Home</Link></li>
           <li><a href="">About</a></li>
           <li><a href=""><span>support us</span></a></li>
         </ul>
