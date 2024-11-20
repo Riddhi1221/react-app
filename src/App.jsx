@@ -6,13 +6,15 @@ import './App.css';
 // import BasicExample from './Components/BasicExample';
 // import Main from './Components/Main'
 // import Support from './Components/Support';
-import MainWeb from './Components/Pages/MainWeb';
+// import MainWeb from './Components/Pages/MainWeb';
 // import MuiExample from './Components/MuiExample';
 // import WebPage from './Components/Pages/WebPage';
 // import Inputresult from './Components/Inputresult';
 // import Sortingvalue from './Components/Sortingvalue';
 // import Searchdata from './Components/Searchdata';
 // import Fly from './Components/Fly';
+import ApiCards from './Components/Pages/ApiCards'
+
 
 
 function App() {
@@ -26,13 +28,15 @@ function App() {
     {/* <BasicExample /> */}
     {/* <Main /> */}
     {/* <Support/> */}
-    <MainWeb />
+    {/* <MainWeb /> */}
     {/* <MuiExample /> */}
     {/* <WebPage /> */}
     {/* <Inputresult /> */}
     {/* <Sortingvalue /> */}
     {/* <Searchdata /> */}
     {/* <Fly /> */}
+    <ApiCards />
+
 
   
   </>
