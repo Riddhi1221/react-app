@@ -13,7 +13,8 @@ import './App.css';
 // import Sortingvalue from './Components/Sortingvalue';
 // import Searchdata from './Components/Searchdata';
 // import Fly from './Components/Fly';
-import ApiCards from './Components/Pages/ApiCards'
+// import ApiCards from './Components/Pages/ApiCards'
+import ApiCrud from './Components/ApiCrud'
 
 
 
@@ -35,7 +36,8 @@ function App() {
     {/* <Sortingvalue /> */}
     {/* <Searchdata /> */}
     {/* <Fly /> */}
-    <ApiCards />
+    {/* <ApiCards /> */}
+    <ApiCrud />
 
 
   
