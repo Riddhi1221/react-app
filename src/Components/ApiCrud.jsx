@@ -3,54 +3,74 @@ import { useFormik } from 'formik';
 import axios from 'axios';
 
 const ApiCrud = () => {
-  let [data , setdata]=useState ([]);
+  let [data, setdata] = useState([]);
+  let [id , setId] = useState(-1);
   const formik = useFormik({
     initialValues: {
       title: '',
       userId: '',
-    }, 
+    },
     onSubmit: async (values) => {
       console.log(values);
-      
-      //   alert(JSON.stringify(values, null, 2));
       try {
-        let res = await axios.post('https://dummyjson.com/posts/add', values, {
+        let res;
+        if (id && id >= 0) {
+        res = await axios.post(`https://dummyjson.com/posts/${id}`, values, {
           headers: { 'Content-Type': 'application/json' },
         });
+      }
+      else{
+        res = await axios.post('https://dummyjson.com/posts/add', values, {
+          headers: { 'Content-Type': 'application/json' },
+        }); 
+      }
         console.log(res);
 
       } catch (error) {
-          console.log(error);
-          
+        console.log(error);
+
       }
     },
   });
- async  function dataFetch() {
+  async function dataFetch() {
     try {
       let res = await axios.get('https://dummyjson.com/posts')
       setdata(res.data.posts);
+      
     } catch (error) {
       console.log(error);
-      
+
     }
   }
-    useEffect(() =>{
-      dataFetch();
-    }, []);
+  useEffect(() => {
+    dataFetch();
+  }, []);
 
-  async  function Delete(id){
+  async function Delete(id) {
     console.log(id);
-    
+
     try {
-      let res= await axios.delete(`https://dummyjson.com/posts/${id}`)
+      let res = await axios.delete(`https://dummyjson.com/posts/${id}`)
       console.log(res);
       
+
     } catch (error) {
       console.log(error.message);
-      
+
     }
-  } 
-  
+  }
+
+  async function UpdateData(id) {
+    let dataCopy = [...data];
+      let findData = dataCopy.find((el) => el.id == id);
+      console.log(findData);
+      formik.setValues({
+        title: findData.title,
+        userId: findData.userId,
+      });
+      setId(id);
+  }
+
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
@@ -85,18 +105,23 @@ const ApiCrud = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((el,id) => {
-          return(
-          <tr key={el.id}>
-            <td>{el.id}</td>
-            <td>{el.title}</td>
-            <td>{el.userId}</td>
-            <td><button onClick={()=> Delete(el.id)}>Delete</button></td>
-            <td><button  >Updata</button></td>
-          </tr>
-          )
-        })}
+          {data.map((el, i) => {
+            return (
+              <tr key={el.id}>
+                <td>{el.id}</td>
+                <td>{el.title}</td>
+                <td>{el.userId}</td>
+                <td>
+                  <button onClick={() => Delete(el.id)}>Delete</button>
+                </td>
+                <td>
+                  <button onClick={() => UpdateData(el.id)}>Update</button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
+
       </table>
     </div>
   )
